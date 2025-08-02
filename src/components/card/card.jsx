@@ -1,5 +1,6 @@
 import React from 'react'
 import './card.css'
+import Button from '../button/Button'
 
 const Card = (props) => {
 
@@ -25,8 +26,8 @@ const Card = (props) => {
         <div className='hr'></div>
 
         <div className='btn__container'>
-            <button>+</button>
-            <button>-</button>
+            <Button title={"+"} type={"add"} />
+            <Button title={"-"} type={"remove"} />
         </div>
     </div>
   )
