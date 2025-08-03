@@ -3,18 +3,20 @@ import "./Cart.css"
 import Button from '../button/Button'
 import { totalPrice } from '../units/total-price'
 
-const Cart = ({ cartItems }) => {
+const Cart = ({ cartItems, onCheckout }) => {
     return (
         <div className='cart__container'>
             <p>
-                Umumihy narx: {totalPrice(cartItems).toLocaleString("en-US", {
+                Umumiy narx: {totalPrice(cartItems).toLocaleString("en-US", {
                     style: "currency",
                     currency: "USD"
                 })}
             </p>
             <Button title={`${cartItems.length === 0 ? "Buyurtma berish" : "To'lov"}`} 
             disable={cartItems.length === 0 ? true : false }
-            type={"checkout"} />
+            type={"checkout"}
+            onClick={onCheckout}
+            />
         </div>
     )
 }
