@@ -39,7 +39,7 @@ const App = () => {
   return (
     <>
       <h1 className='heading'>kurslar</h1>
-      <Cart />
+      <Cart cartItems={cartItems} />
       <div className='cards__container'>
         {courses.map(course => (
           <Card key={course.id} course={course} onAddItem={onAddItem} onRemoveItem={onRemoveItem} />
