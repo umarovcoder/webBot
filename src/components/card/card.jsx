@@ -4,7 +4,7 @@ import Button from '../button/Button'
 
 const Card = (props) => {
 
-    const {course} = props
+    const {course, onAddItem, onRemoveItem} = props
 
   return (
     <div className='card'>
@@ -26,8 +26,8 @@ const Card = (props) => {
         <div className='hr'></div>
 
         <div className='btn__container'>
-            <Button title={"+"} type={"add"} />
-            <Button title={"-"} type={"remove"} />
+            <Button title={"+"} onClick={() => onAddItem(course)} type={"add"} />
+            <Button title={"-"} onClick={() => onRemoveItem(course)} type={"remove"} />
         </div>
     </div>
   )
